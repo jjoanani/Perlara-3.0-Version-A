@@ -1,0 +1,12 @@
+Name,Slug,Gene Mechanism,Stage,Stage Number,Stage Detail,Partner,Disease Family,Featured,Order
+Maggie's Pearl,maggies-pearl,PMM2-CDG · aldose reductase inhibitor,04 Translate,4,"Phase III, Mayo Clinic Minnesota",Maggie's Pearl Foundation,CDG,true,1
+SURF1 Leigh Syndrome,surf1-leigh-syndrome,SURF1 · Complex IV assembly,03 Validate,3,Fibroblast validation done (6/12 hits),Cure Mito Foundation,Mitochondrial,true,2
+FOXG1 Cure Odyssey,foxg1-cure-odyssey,FOXG1 syndrome · neurodevelopmental,02 Screen,2,Hits triaged,FOXG1 Research Foundation,Neurodevelopmental,false,3
+DHDDS Cure Odyssey,dhdds-cure-odyssey,DHDDS · dolichol biosynthesis,02 Screen,2,First batch screen complete,Cure DHDDS,CDG,false,4
+NARS1 Cure Odyssey,nars1-cure-odyssey,NARS1 · asparaginyl-tRNA synthetase,02 Screen,2,Primary screen,NARS1 Cure Alliance,tRNA synthetase,false,5
+PIGW,pigw,GPI-anchor biosynthesis,02 Screen,2,N-of-1 protocol design,Family-led,GPI-anchor,false,6
+PIGN Cure Collective,pign-cure-collective,GPI-anchor biosynthesis,02 Screen,2,Multi-family collective screen,Cure PIGN Collective,GPI-anchor,false,7
+ADSL Cure Odyssey,adsl-cure-odyssey,ADSL · purine biosynthesis,02 Screen,2,Primary screen,ADSL Family Network,Purine,false,8
+ECHS1 Cure Odyssey,echs1-cure-odyssey,ECHS1 · valine catabolism,02 Screen,2,Primary screen,ECHS1 Alliance,Valine catabolism,false,9
+ALG11-CDG,alg11-cdg,ALG11 · N-glycosylation,01 Model,1,Yeast avatar in build,CDG CARE,CDG,false,10
+ETC Complex I-V suite,etc-complex-i-v-suite,CI / CIV / CV with Y. lipolytica,01 Model,1,SBIR Aim 1 buildout,SBIR-funded,Mitochondrial,true,11

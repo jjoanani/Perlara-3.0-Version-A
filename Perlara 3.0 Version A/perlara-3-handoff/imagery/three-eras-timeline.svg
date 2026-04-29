@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 240"
+     role="img" aria-labelledby="eras-title eras-desc">
+  <title id="eras-title">Perlara 1.0, 2.0, and 3.0 timeline</title>
+  <desc id="eras-desc">A horizontal timeline showing the three eras of Perlara: 1.0 (2014, biotech platform), 2.0 (2019, patient services), and 3.0 (2025, full-stack drug development). Each era is a node on a line with a year and one-line label.</desc>
+
+  <rect width="920" height="240" rx="12" fill="#FBF8F2"/>
+
+  <!-- baseline -->
+  <line x1="80" y1="120" x2="840" y2="120"
+        stroke="#1A1614" stroke-width="2"/>
+
+  <!-- 1.0 node -->
+  <g transform="translate(160, 120)">
+    <circle r="20" fill="#FBF8F2" stroke="#1A1614" stroke-width="3"/>
+    <text x="0" y="6" text-anchor="middle" font-family="Fraunces, Georgia, serif"
+          font-size="15" font-weight="600" fill="#1A1614">1.0</text>
+    <text x="0" y="-44" text-anchor="middle" font-family="Fraunces, Georgia, serif"
+          font-size="22" fill="#D9603F" font-weight="500">2014</text>
+    <text x="0" y="50" text-anchor="middle" font-family="IBM Plex Mono, monospace"
+          font-size="12" fill="#0B6B5C" font-weight="600">BIOTECH ERA</text>
+    <text x="0" y="72" text-anchor="middle" font-family="Inter, sans-serif"
+          font-size="13" fill="#1A1614">First PBC drug-discovery platform.</text>
+    <text x="0" y="92" text-anchor="middle" font-family="Inter, sans-serif"
+          font-size="12" fill="#4A4641">Yeast and fly avatars on demand.</text>
+  </g>
+
+  <!-- 2.0 node -->
+  <g transform="translate(460, 120)">
+    <circle r="20" fill="#FBF8F2" stroke="#1A1614" stroke-width="3"/>
+    <text x="0" y="6" text-anchor="middle" font-family="Fraunces, Georgia, serif"
+          font-size="15" font-weight="600" fill="#1A1614">2.0</text>
+    <text x="0" y="-44" text-anchor="middle" font-family="Fraunces, Georgia, serif"
+          font-size="22" fill="#D9603F" font-weight="500">2019</text>
+    <text x="0" y="50" text-anchor="middle" font-family="IBM Plex Mono, monospace"
+          font-size="12" fill="#0B6B5C" font-weight="600">SERVICES ERA</text>
+    <text x="0" y="72" text-anchor="middle" font-family="Inter, sans-serif"
+          font-size="13" fill="#1A1614">Patient-foundation consulting.</text>
+    <text x="0" y="92" text-anchor="middle" font-family="Inter, sans-serif"
+          font-size="12" fill="#4A4641">Maggie&apos;s Pearl: N-of-1 → Phase III.</text>
+  </g>
+
+  <!-- 3.0 node (current — bigger / coral fill) -->
+  <g transform="translate(760, 120)">
+    <circle r="26" fill="#D9603F" stroke="#1A1614" stroke-width="3"/>
+    <text x="0" y="7" text-anchor="middle" font-family="Fraunces, Georgia, serif"
+          font-size="17" font-weight="600" fill="#FBF8F2">3.0</text>
+    <text x="0" y="-50" text-anchor="middle" font-family="Fraunces, Georgia, serif"
+          font-size="22" fill="#D9603F" font-weight="500">2025</text>
+    <text x="0" y="56" text-anchor="middle" font-family="IBM Plex Mono, monospace"
+          font-size="12" fill="#0B6B5C" font-weight="600">FULL-STACK ERA</text>
+    <text x="0" y="78" text-anchor="middle" font-family="Inter, sans-serif"
+          font-size="13" fill="#1A1614">$1.7M Direct-to-Phase-II SBIR.</text>
+    <text x="0" y="98" text-anchor="middle" font-family="Inter, sans-serif"
+          font-size="12" fill="#4A4641">From platform to pipeline.</text>
+  </g>
+
+  <!-- "today" pin -->
+  <g transform="translate(840, 120)">
+    <line x1="0" y1="-30" x2="0" y2="30" stroke="#0B6B5C" stroke-width="1.5"
+          stroke-dasharray="3 3"/>
+    <text x="0" y="-40" text-anchor="middle"
+          font-family="IBM Plex Mono, monospace"
+          font-size="11" fill="#0B6B5C" font-weight="700">TODAY</text>
+  </g>
+</svg>

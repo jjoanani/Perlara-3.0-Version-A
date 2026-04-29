@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500"
+     role="img" aria-labelledby="hero-yth-title hero-yth-desc">
+  <title id="hero-yth-title">From yeast avatar to patient medicine</title>
+  <desc id="hero-yth-desc">A stylized illustration: on the left, a yeast cell with a budding daughter cell, representing Perlara's humanized yeast model. In the center, a small molecule shape on a sweeping arrow representing a screened compound. On the right, a human cell containing a mitochondrion and a branched glycan tree, representing the patient cell where the compound is validated.</desc>
+
+  <!-- Soft cream background panel -->
+  <rect width="800" height="500" rx="12" fill="#E6F1ED"/>
+
+  <!-- subtle dotted background grid -->
+  <defs>
+    <pattern id="dots" x="0" y="0" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#0B6B5C" fill-opacity="0.18"/>
+    </pattern>
+    <marker id="arrowhead" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#1A1614"/>
+    </marker>
+  </defs>
+  <rect width="800" height="500" rx="12" fill="url(#dots)"/>
+
+  <!-- ============= LEFT: yeast cell ============= -->
+  <g transform="translate(120, 250)">
+    <!-- mother cell -->
+    <ellipse cx="0" cy="0" rx="105" ry="105" fill="#FBF8F2" stroke="#1A1614" stroke-width="3"/>
+    <!-- daughter cell (bud) -->
+    <ellipse cx="95" cy="-90" rx="42" ry="42" fill="#0B6B5C" stroke="#1A1614" stroke-width="3"/>
+    <!-- nucleus -->
+    <circle cx="-15" cy="-10" r="22" fill="#D9603F" opacity="0.92"/>
+    <circle cx="-22" cy="-16" r="6" fill="#FBF8F2"/>
+    <!-- mitochondria as tiny ovals -->
+    <ellipse cx="35" cy="20" rx="14" ry="6" fill="#06453B" opacity="0.7"/>
+    <ellipse cx="-50" cy="40" rx="14" ry="6" fill="#06453B" opacity="0.7" transform="rotate(-20, -50, 40)"/>
+    <ellipse cx="20" cy="60" rx="11" ry="5" fill="#06453B" opacity="0.7" transform="rotate(35, 20, 60)"/>
+    <!-- labels -->
+    <text x="-30" y="135" font-family="IBM Plex Mono, monospace" font-size="13" fill="#1A1614" font-weight="600">Yeast avatar</text>
+    <text x="-30" y="153" font-family="Inter, sans-serif" font-size="12" fill="#4A4641">humanized strain</text>
+  </g>
+
+  <!-- ============= CENTER: compound + arrow ============= -->
+  <g transform="translate(400, 250)">
+    <!-- sweeping curved arrow -->
+    <path d="M -110 -10 Q 0 -90 110 0"
+          fill="none" stroke="#1A1614" stroke-width="3"
+          stroke-linecap="round" marker-end="url(#arrowhead)"/>
+    <!-- a small molecule riding the arc: hexagon + line + circle -->
+    <g transform="translate(0, -67)">
+      <polygon points="-14,-8 -7,-16 7,-16 14,-8 7,0 -7,0"
+               fill="#FBF8F2" stroke="#1A1614" stroke-width="2.2"/>
+      <line x1="14" y1="-8" x2="30" y2="-2" stroke="#1A1614" stroke-width="2.2"/>
+      <circle cx="36" cy="0" r="6" fill="#D9603F" stroke="#1A1614" stroke-width="2"/>
+    </g>
+    <!-- caption -->
+    <text x="-38" y="50" font-family="IBM Plex Mono, monospace" font-size="13" fill="#1A1614" font-weight="600">Repurposed</text>
+    <text x="-22" y="68" font-family="IBM Plex Mono, monospace" font-size="13" fill="#1A1614" font-weight="600">compound</text>
+  </g>
+
+  <!-- ============= RIGHT: human cell ============= -->
+  <g transform="translate(660, 250)">
+    <!-- cell membrane (irregular) -->
+    <path d="M -110 0
+             C -110 -70 -60 -110 0 -110
+             C 70 -110 110 -55 110 0
+             C 110 65 60 110 0 110
+             C -65 110 -110 65 -110 0 z"
+          fill="#FBF8F2" stroke="#1A1614" stroke-width="3"/>
+    <!-- nucleus -->
+    <ellipse cx="-25" cy="20" rx="35" ry="28" fill="#0B6B5C" opacity="0.18"
+             stroke="#0B6B5C" stroke-width="2"/>
+    <circle cx="-30" cy="15" r="6" fill="#0B6B5C"/>
+
+    <!-- mitochondrion -->
+    <g transform="translate(35, -35)">
+      <ellipse cx="0" cy="0" rx="34" ry="18" fill="#FBF8F2" stroke="#1A1614" stroke-width="2"/>
+      <!-- inner cristae folds -->
+      <path d="M -22 -6 Q -16 4 -10 -6 Q -4 4 2 -6 Q 8 4 14 -6 Q 20 4 24 -3"
+            fill="none" stroke="#0B6B5C" stroke-width="2" stroke-linecap="round"/>
+    </g>
+
+    <!-- glycan tree (small) -->
+    <g transform="translate(40, 50)">
+      <line x1="0" y1="0" x2="0" y2="-22" stroke="#1A1614" stroke-width="2"/>
+      <line x1="0" y1="-22" x2="-15" y2="-36" stroke="#1A1614" stroke-width="2"/>
+      <line x1="0" y1="-22" x2="15" y2="-36" stroke="#1A1614" stroke-width="2"/>
+      <line x1="-15" y1="-36" x2="-25" y2="-50" stroke="#1A1614" stroke-width="2"/>
+      <line x1="-15" y1="-36" x2="-5" y2="-50" stroke="#1A1614" stroke-width="2"/>
+      <circle cx="0" cy="0" r="5" fill="#D9603F"/>
+      <circle cx="0" cy="-22" r="5" fill="#D9603F"/>
+      <circle cx="-15" cy="-36" r="5" fill="#D9603F"/>
+      <circle cx="15" cy="-36" r="5" fill="#D9603F"/>
+      <circle cx="-25" cy="-50" r="5" fill="#FBF8F2" stroke="#1A1614" stroke-width="2"/>
+      <circle cx="-5" cy="-50" r="5" fill="#FBF8F2" stroke="#1A1614" stroke-width="2"/>
+    </g>
+
+    <!-- labels -->
+    <text x="-44" y="155" font-family="IBM Plex Mono, monospace" font-size="13" fill="#1A1614" font-weight="600">Patient cell</text>
+    <text x="-50" y="173" font-family="Inter, sans-serif" font-size="12" fill="#4A4641">fibroblast / iPSC</text>
+  </g>
+</svg>

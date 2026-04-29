@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data Portal · Perlara</title>
+<meta name="description" content="Interactive, de-identified data portal over Perlara's yeast-based phenotypic screens — 37 IMD models, 8,384 compounds.">
+<link rel="icon" type="image/svg+xml" href="imagery/favicon.svg">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="data-portal">
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html" aria-label="Perlara home">
+      <img src="imagery/logo-lockup.svg" alt="Perlara" height="32">
+      <span class="tag">3.0</span>
+    </a>
+    <nav class="nav-links" aria-label="primary">
+      <a data-nav="home" href="index.html">Home</a>
+      <a data-nav="pipeline" href="pipeline.html">Platform &amp; Pipeline</a>
+      <a data-nav="data-portal" href="data-portal.html">Data Portal</a>
+      <a data-nav="cure-odysseys" href="cure-odysseys.html">Cure Odysseys</a>
+      <a data-nav="about" href="about.html">About</a>
+      <a data-nav="contact" href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Data portal · public preview</div>
+    <h1>Every model, every compound, every Z-score.</h1>
+    <p class="lede">
+      Explore the full de-identified screening results across 37 IMD
+      yeast models and 8,384 TargetMol compounds. Compound identities
+      are anonymized (<code>CPD_xxxxx</code> IDs) until IP is filed;
+      all effect sizes, pathway annotations, and dual-condition
+      co-rescue signals are public.
+    </p>
+    <div class="cta-row">
+      <a class="btn warm" href="https://www.perlara.com/perlara-public-dashboard"
+         target="_blank" rel="noopener">
+        Open dashboard in new tab →
+      </a>
+      <a class="btn secondary" href="#portal">Scroll to embed</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">What you&rsquo;ll find</div>
+    <h2>Five views over one dataset.</h2>
+    <div class="grid">
+      <div class="card"><div class="card-meta">Tab 01</div>
+        <h3>Gene / disease overview</h3>
+        <p>Rescuer and sensitizer counts for all 37 models, dynamic-range scatter, and pathway hit-rate.</p></div>
+      <div class="card"><div class="card-meta">Tab 02</div>
+        <h3>Compound × gene heatmap</h3>
+        <p>Top 300 compounds by dynamic range. Filter by profile class and minimum |Z|.</p></div>
+      <div class="card"><div class="card-meta">Tab 03</div>
+        <h3>Compound explorer</h3>
+        <p>Searchable, sortable table over all 8,384 compounds. Compound identities are redacted.</p></div>
+      <div class="card"><div class="card-meta">Tab 04</div>
+        <h3>Dual-condition pairs</h3>
+        <p>Gene × gene heatmap of shared rescuers and sensitizers — empirical evidence for &ldquo;platforms-in-a-pill&rdquo;.</p></div>
+      <div class="card"><div class="card-meta">Tab 05</div>
+        <h3>Per-compound fingerprint</h3>
+        <p>37-gene Z-score fingerprint for any compound, plus the Cure Odysseys posts keyed to its top-hit gene.</p></div>
+    </div>
+
+    <div class="callout warm">
+      <h4>Public-preview mode</h4>
+      <p style="margin-bottom: 0;">
+        This dashboard is running in public mode: all compound names,
+        SMILES strings, and target annotations are redacted. Every row
+        is keyed by an opaque <code>CPD_xxxxx</code> identifier.
+        Perlara team members access the full-fidelity internal version
+        behind SSO.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="portal">
+  <div class="wrap">
+    <div class="kicker">Live embed</div>
+    <h2>Interactive dashboard.</h2>
+    <p class="section-lede">
+      Served from <code>perlara.com/perlara-public-dashboard</code>.
+      If the embed fails to load (e.g. cookie / X-Frame restriction),
+      open it directly in a new tab.
+    </p>
+
+    <div class="iframe-host">
+      <div class="iframe-toolbar">
+        <span class="dot" aria-hidden="true"></span>
+        <span><strong>perlara.com/perlara-public-dashboard</strong></span>
+        <span style="margin-left: auto;">
+          <a href="https://www.perlara.com/perlara-public-dashboard"
+             target="_blank" rel="noopener">Open in new tab ↗</a>
+        </span>
+      </div>
+      <iframe src="https://www.perlara.com/perlara-public-dashboard"
+              title="Perlara public dashboard" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allow="fullscreen"></iframe>
+    </div>
+
+    <div class="wf-note">
+      Webflow: paste the snippet from <code>embeds/dashboard-iframe-embed.html</code>
+      into a Webflow Embed element. Lock the height to 1100 px desktop
+      / 780 px mobile, or use iframe-resizer.
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">How the data was produced</div>
+    <h2>From wet lab to JSON bundle.</h2>
+    <p>
+      The dataset behind this portal is batch <code>TM_03162026</code>:
+      37 humanized yeast models × 8,384 TargetMol compounds, processed
+      through Perlara&rsquo;s standardized growth-rescue assay. Rescuers
+      are scored at Z&nbsp;&ge;&nbsp;2.5 and sensitizers at
+      Z&nbsp;&le;&nbsp;&minus;2.5 relative to DMSO control. Each row in
+      the heatmap is one compound; each column is one disease model.
+    </p>
+    <p>
+      The portal is rebuilt automatically after every screening batch.
+      Compound-level de-identification is applied at preprocessing
+      &mdash; names, SMILES, and explicit targets never reach the
+      public bundle.
+    </p>
+
+    <h3>Dataset at a glance</h3>
+    <table class="tbl">
+      <tbody>
+        <tr><th>Batch</th><td><code>TM_03162026</code></td></tr>
+        <tr><th>Models</th><td>37 humanized yeast strains</td></tr>
+        <tr><th>Compounds</th><td>8,384 (TargetMol standardized library)</td></tr>
+        <tr><th>Rescuer threshold</th><td>Z &ge; 2.5</td></tr>
+        <tr><th>Sensitizer threshold</th><td>Z &le; &minus;2.5</td></tr>
+        <tr><th>Release mode</th><td>Public preview (compound-level redaction)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="brand-row"><img src="imagery/logo-lockup.svg" alt="Perlara" height="32"></div>
+        <p style="margin-bottom: 0;">
+          Full-stack drug discovery and development for inherited
+          metabolic diseases. San Francisco, CA.
+        </p>
+      </div>
+      <div><h4>Explore</h4><p style="line-height: 2;">
+        <a href="pipeline.html">Pipeline</a><br>
+        <a href="data-portal.html">Data portal</a><br>
+        <a href="cure-odysseys.html">Cure Odysseys</a><br>
+        <a href="about.html">About</a></p></div>
+      <div><h4>Archives</h4><p style="line-height: 2;">
+        <a href="https://archive.perlara.com" target="_blank" rel="noopener">Perlara 1.0</a><br>
+        <a href="archive-2.0.html">Perlara 2.0</a><br>
+        <a href="https://www.cureodysseys.com" target="_blank" rel="noopener">Cure Odysseys</a></p></div>
+      <div><h4>Contact</h4><p style="line-height: 2;">
+        <a href="contact.html">Partner with us</a><br>
+        <a href="mailto:hello@perlara.com">hello@perlara.com</a></p></div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Perlara PBC</span>
+      <span>Reference build · Webflow handoff</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380"
+     role="img" aria-labelledby="glycan-title glycan-desc">
+  <title id="glycan-title">Glycan biosynthesis tree with congenital disorders of glycosylation defect points</title>
+  <desc id="glycan-desc">A branched N-linked glycan tree showing where Perlara's CDG programs intervene. Filled circles are mannose residues; squares are GlcNAc; the dashed lines mark gene defects: PMM2 at the precursor pool, ALG11 mid-branch, PIGN/PIGW on the GPI-anchor side branch. The whole illustration uses cream, deep teal, and warm coral.</desc>
+
+  <defs>
+    <g id="manAtom">
+      <circle r="11" fill="#0B6B5C" stroke="#1A1614" stroke-width="2"/>
+    </g>
+    <g id="glcAtom">
+      <rect x="-10" y="-10" width="20" height="20" fill="#FBF8F2" stroke="#1A1614" stroke-width="2"/>
+    </g>
+    <g id="warmAtom">
+      <circle r="11" fill="#D9603F" stroke="#1A1614" stroke-width="2"/>
+    </g>
+    <g id="phosAtom">
+      <polygon points="-10,-7 0,-12 10,-7 6,5 -6,5"
+               fill="#FBF8F2" stroke="#1A1614" stroke-width="2"/>
+    </g>
+  </defs>
+
+  <!-- soft background -->
+  <rect width="720" height="380" rx="12" fill="#FBF8F2"/>
+
+  <!-- root: GlcNAc-GlcNAc -->
+  <g transform="translate(360, 320)">
+    <line x1="0" y1="0" x2="0" y2="-40" stroke="#1A1614" stroke-width="2.2"/>
+    <use href="#glcAtom" x="0" y="0"/>
+    <use href="#glcAtom" x="0" y="-40"/>
+  </g>
+
+  <!-- core: 3 mannose (β-Man branching) -->
+  <g transform="translate(360, 240)">
+    <line x1="0" y1="0" x2="0" y2="-30" stroke="#1A1614" stroke-width="2.2"/>
+    <line x1="0" y1="-30" x2="-50" y2="-60" stroke="#1A1614" stroke-width="2.2"/>
+    <line x1="0" y1="-30" x2="50" y2="-60" stroke="#1A1614" stroke-width="2.2"/>
+    <use href="#manAtom" x="0" y="0"/>
+    <use href="#manAtom" x="0" y="-30"/>
+    <use href="#manAtom" x="-50" y="-60"/>
+    <use href="#manAtom" x="50" y="-60"/>
+  </g>
+
+  <!-- left arm extensions -->
+  <g transform="translate(310, 180)">
+    <line x1="0" y1="0" x2="-35" y2="-30" stroke="#1A1614" stroke-width="2.2"/>
+    <line x1="0" y1="0" x2="-15" y2="-45" stroke="#1A1614" stroke-width="2.2"/>
+    <use href="#manAtom" x="-35" y="-30"/>
+    <use href="#manAtom" x="-15" y="-45"/>
+  </g>
+  <!-- right arm extensions -->
+  <g transform="translate(410, 180)">
+    <line x1="0" y1="0" x2="35" y2="-30" stroke="#1A1614" stroke-width="2.2"/>
+    <line x1="0" y1="0" x2="15" y2="-45" stroke="#1A1614" stroke-width="2.2"/>
+    <use href="#manAtom" x="35" y="-30"/>
+    <use href="#manAtom" x="15" y="-45"/>
+  </g>
+
+  <!-- caps (terminal Glc/Glc/Glc on alpha arm) -->
+  <use href="#glcAtom" x="425" y="100"/>
+  <use href="#glcAtom" x="450" y="120"/>
+
+  <!-- ============== DEFECT MARKERS ============== -->
+  <!-- PMM2 — at the substrate pool (left of root) -->
+  <g transform="translate(180, 320)">
+    <use href="#warmAtom" x="0" y="0"/>
+    <text x="0" y="32" text-anchor="middle" font-family="IBM Plex Mono, monospace"
+          font-size="13" font-weight="700" fill="#1A1614">PMM2</text>
+    <text x="0" y="48" text-anchor="middle" font-family="Inter, sans-serif"
+          font-size="11" fill="#4A4641">Man-1-P pool</text>
+    <line x1="20" y1="0" x2="335" y2="0" stroke="#D9603F" stroke-width="1.8"
+          stroke-dasharray="4 4"/>
+  </g>
+
+  <!-- ALG11 — mid-branch -->
+  <g transform="translate(540, 220)">
+    <use href="#warmAtom" x="0" y="0"/>
+    <text x="0" y="-22" text-anchor="middle" font-family="IBM Plex Mono, monospace"
+          font-size="13" font-weight="700" fill="#1A1614">ALG11</text>
+    <text x="0" y="-8" text-anchor="middle" font-family="Inter, sans-serif"
+          font-size="11" fill="#4A4641">α-1,2 mannosyl T</text>
+    <line x1="-20" y1="-3" x2="-115" y2="-40" stroke="#D9603F" stroke-width="1.8"
+          stroke-dasharray="4 4"/>
+  </g>
+
+  <!-- DHDDS / dolichol pool -->
+  <g transform="translate(120, 200)">
+    <use href="#phosAtom" x="0" y="0"/>
+    <text x="0" y="-22" text-anchor="middle" font-family="IBM Plex Mono, monospace"
+          font-size="13" font-weight="700" fill="#1A1614">DHDDS</text>
+    <text x="0" y="-8" text-anchor="middle" font-family="Inter, sans-serif"
+          font-size="11" fill="#4A4641">dolichol</text>
+    <line x1="14" y1="-2" x2="320" y2="40" stroke="#D9603F" stroke-width="1.8"
+          stroke-dasharray="4 4"/>
+  </g>
+
+  <!-- PIGN / PIGW on a side branch (GPI anchor) -->
+  <g transform="translate(620, 320)">
+    <line x1="0" y1="0" x2="-40" y2="-50" stroke="#1A1614" stroke-width="2.2"
+          stroke-dasharray="3 3"/>
+    <use href="#manAtom" x="0" y="0"/>
+    <use href="#manAtom" x="-40" y="-50"/>
+    <use href="#warmAtom" x="0" y="0"/>
+    <text x="36" y="6" font-family="IBM Plex Mono, monospace"
+          font-size="13" font-weight="700" fill="#1A1614">PIGN</text>
+    <text x="36" y="22" font-family="IBM Plex Mono, monospace"
+          font-size="13" font-weight="700" fill="#1A1614">PIGW</text>
+    <text x="36" y="40" font-family="Inter, sans-serif"
+          font-size="11" fill="#4A4641">GPI-anchor</text>
+  </g>
+
+  <!-- caption -->
+  <text x="360" y="40" text-anchor="middle"
+        font-family="Fraunces, Georgia, serif"
+        font-size="20" font-weight="500" fill="#1A1614">N-linked glycan biosynthesis</text>
+  <text x="360" y="60" text-anchor="middle"
+        font-family="Inter, sans-serif"
+        font-size="12" fill="#4A4641">Perlara CDG programs intervene at four pathway nodes (orange).</text>
+</svg>

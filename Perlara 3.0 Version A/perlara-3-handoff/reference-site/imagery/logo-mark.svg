@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Perlara mark">
+  <!-- Yeast-cell budding mark: mother cell + daughter cell.
+       Two interlocking ovals form an implicit P. -->
+  <title>Perlara mark</title>
+  <g fill="none" stroke="#1A1614" stroke-width="2.5" stroke-linejoin="round">
+    <!-- mother cell -->
+    <ellipse cx="26" cy="38" rx="20" ry="20" fill="#FBF8F2"/>
+    <!-- daughter cell (the bud) -->
+    <ellipse cx="50" cy="18" rx="10" ry="10" fill="#0B6B5C"/>
+  </g>
+  <!-- inner organelle hint in the mother cell -->
+  <circle cx="22" cy="36" r="4.5" fill="#D9603F"/>
+  <!-- subtle connection / cytoplasm continuity -->
+  <path d="M 39 24 Q 43 28 46 25" stroke="#1A1614" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>
